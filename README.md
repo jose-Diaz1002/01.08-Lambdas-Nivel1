@@ -1,4 +1,5 @@
 📚 01.08 - Lambdas - Nivel 1
+
 📄 Description
 This project consists of a series of Java exercises designed to practice lambdas, functional interfaces, method references, 
 and basic stream operations. You’ll work with lists, string manipulation, and sorting using Java 8 features.
