@@ -10,8 +10,6 @@ public class Exercise3 {
 
     public static void montsList(List<String> months) {
 
-        for (String mont : months){
-            System.out.println(mont);
-        }
+       months.stream().forEach(System.out::println);
     }
 }
