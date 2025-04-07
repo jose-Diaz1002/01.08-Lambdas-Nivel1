@@ -12,8 +12,7 @@ public class Main {
         System.out.println("### Excercise 2 ###");
         System.out.println("--------------------------------");
 
-        Exercise2.wordsWithOYMore5Letters(listStrings);
-
+        Exercise2.wordsWithOLess5Letters(listStrings);
 
     }
 }

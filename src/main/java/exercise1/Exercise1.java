@@ -2,26 +2,18 @@ package exercise1;
 
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Exercise1 {
 
     public static void wordsWithO(List<String> names) {
 
-        names.stream()
-                .filter((name) -> {
-                    return name.contains("o");
-                }).forEach((name) -> {
-                    System.out.println(name);
-                });
+        List<String> whithOList = names.stream()
+                .filter((name) -> name.toLowerCase().contains("o"))
+                .collect(Collectors.toList());
 
-    }
+        whithOList.stream().forEach(System.out::println);
 
-    //esta es la amnera simplificada
-    public static void wordsWithO2(List<String> names) {
-
-        names.stream()
-                .filter((name) -> name.contains("o"))
-                .forEach(System.out::println);
     }
 }
 

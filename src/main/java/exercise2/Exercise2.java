@@ -1,31 +1,18 @@
 package exercise2;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Exercise2 {
 
-    public static void wordsWithOYMore5Letters(List<String> names) {
+    public static void wordsWithOLess5Letters(List<String> names) {
 
-        names.stream()
-                .filter((name) -> {
-                    return name.length() > 5;
-                })
-                .filter((name) -> {
-                    return name.contains("o");
-                })
-                .forEach((name) -> {
-                    System.out.println(name);
-                });
+        List<String> whithOList = names.stream()
+                .filter((name) -> name.contains("o") && name.length() > 5)
+                .collect(Collectors.toList());
+
+        whithOList.stream().forEach(System.out::println);
 
     }
-
-    //esta es la amnera simplificada
-    public static void wordsWithO2(List<String> names) {
-
-        names.stream()
-                .filter((name) -> name.contains("o"))
-                .forEach(System.out::println);
-    }
-
 
 }
